@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Ensure package-lock.json exists; if not, remove it from the COPY command above
-RUN ls -l package.json package-lock.json || echo "Missing package-lock.json"
+RUN ls -l package.json package-lock.json 
 
 # Install dependencies
 RUN npm install --silent
